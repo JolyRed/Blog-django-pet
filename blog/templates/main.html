@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Главная страница</title>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мой блог!</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О сайте</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="{% url 'enter_page' %}" class="btn-new">Вход</a>
+    </header>
+
+    <main>
+        <section class="posts">
+            <article class="post">
+                <h2>Заголовок поста 1</h2>
+                <p>Краткое описание поста 1. Узнайте больше о интересной теме, щелкнув по заголовку.</p>
+                <a href="#" class="read-more">Читать далее</a>
+            </article>
+
+            <article class="post">
+                <h2>Заголовок поста 2</h2>
+                <p>Краткое описание поста 2. Узнайте больше о интересной теме, щелкнув по заголовку.</p>
+                <a href="#" class="read-more">Читать далее</a>
+            </article>
+
+            <article class="post">
+                <h2>Заголовок поста 3</h2>
+                <p>Краткое описание поста 3. Узнайте больше о интересной теме, щелкнув по заголовку.</p>
+                <a href="#" class="read-more">Читать далее</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Мой Блог. Все права защищены.</p>
+    </footer>
+</body>
+</html>

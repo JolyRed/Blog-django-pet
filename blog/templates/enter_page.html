@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h2>Вход</h2>
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Имя пользователя:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+            <p class="login-link">Нет аккаунта? <a href="{% url 'registration_page' %}">Зарегистрироваться</a></p>
+        </div>
+    </div>
+</body>
+</html>
